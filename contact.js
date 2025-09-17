@@ -24,5 +24,6 @@ document.getElementById("myForm").addEventListener("submit", function (e) {
     .then((response) => response.json())
     .then((result) => {
       console.log("Server response: ", result);
+      document.getElementById("result").innerHTML = result.message;
     });
 });

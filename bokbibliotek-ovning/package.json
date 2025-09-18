@@ -1,0 +1,13 @@
+{
+  "name": "bokbibliotek-ovning",
+  "version": "1.0.0",
+  "description": "Övning för form, fetch och Node.js HTTP server",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["node", "http", "form", "fetch", "övning"],
+  "author": "TE4 Academy"
+}

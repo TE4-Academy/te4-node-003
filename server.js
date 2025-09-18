@@ -19,8 +19,28 @@ const server = http.createServer((req, res) => {
 
   //POST hantering
   if (method === "POST" && url === "/submit-contact") {
-    res.writeHead(200, { "Content-Type": "application/json" });
-    res.end(JSON.stringify({ status: "success", message: "POST mottaget" }));
+    let body = "";
+    req.on("data", (chunk) => {
+      body += chunk.toString();
+    });
+    req.on("end", () => {
+      const contactData = JSON.parse(body);
+      contactData.timestamp = new Date().toISOString();
+
+      const filePath = path.join(__dirname, "contacts.json");
+      let contacts = [];
+
+      if (fs.existsSync(filePath)) {
+        const fileData = fs.readFileSync(filePath, "utf8");
+        contacts = JSON.parse(fileData);
+      }
+
+      contacts.push(contactData);
+      fs.writeFileSync(filePath, JSON.stringify(contacts, null, 2));
+
+      res.writeHead(200, { "Content-Type": "application/json" });
+      res.end(JSON.stringify({ status: "success", message: "POST mottaget" }));
+    });
     return;
   }
 

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bokbibliotek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Mitt Bokbibliotek</h1>
+        
+        <div class="add-book-section">
+            <h2>Lägg till ny bok</h2>
+            <!-- FEL 3: Form skickar form-data istället för JSON -->
+            <form id="book-form" action="/add-book" method="POST">
+                <div class="form-group">
+                    <label for="title">Titel:</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="author">Författare:</label>
+                    <input type="text" id="author" name="author" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="genre">Genre:</label>
+                    <select id="genre" name="genre" required>
+                        <option value="">Välj genre</option>
+                        <option value="roman">Roman</option>
+                        <option value="deckare">Deckare</option>
+                        <option value="fantasy">Fantasy</option>
+                        <option value="sci-fi">Science Fiction</option>
+                        <option value="biografier">Biografier</option>
+                    </select>
+                </div>
+                
+                <button type="submit">Lägg till bok</button>
+            </form>
+            
+            <!-- FEL 4: Saknas feedback till användaren -->
+            <div id="message" style="display: none;"></div>
+        </div>
+        
+        <div class="books-section">
+            <h2>Mina böcker</h2>
+            <!-- FEL 5: Saknas funktion för att visa böcker -->
+            <div id="books-list">
+                <p>Funktionen för att visa böcker är inte implementerad än...</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

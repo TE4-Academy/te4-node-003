@@ -34,38 +34,6 @@ Detta dokument ger en översikt över alla diagram som skapats för bokbibliotek
 - **Målgrupp**: För förståelse av JSON, serialisering
 - **Fokus**: Data format, parsing, validering
 
-## 🎯 Användning:
-
-### **Fas 1: Introduktion (5-10 min)**
-
-- Använd **01-systemarkitektur.md**
-- Diskutera separation of concerns
-- Förklara client-server modellen
-
-### **Fas 2: Problembeskrivning (10-15 min)**
-
-- Använd **02-formular-flode.md**
-- Visa vad som går fel utan preventDefault
-- Diskutera form-data vs JSON problematik
-
-### **Fas 3: Teknisk fördjupning (15-20 min)**
-
-- Använd **03-fetch-detaljer.md**
-- Förklara promises och async programmering
-- Diskutera HTTP headers och status codes
-
-### **Fas 4: Timing och ordning (10-15 min)**
-
-- Använd **04-sekvensdiagram.md**
-- Diskutera event loop och asynkron kod
-- Hantera race conditions
-
-### **Fas 5: Data hantering (10-15 min)**
-
-- Använd **05-data-transformation.md**
-- Förklara JSON serialisering/deserialisering
-- Diskutera validering på olika nivåer
-
 ## 💡 Diskussionsfrågor per diagram:
 
 ### Systemarkitektur:
